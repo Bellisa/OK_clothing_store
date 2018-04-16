@@ -32,7 +32,7 @@ const plugins = [
 ];
 
 module.exports = {
-  entry: './app.js',
+  entry: './app.component.js',
   context: path.resolve('src'),
   output: {
     filename: 'bundle-[name].js',

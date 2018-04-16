@@ -2,7 +2,7 @@
   "name": "ok_store",
   "version": "1.0.0",
   "description": "test project",
-  "main": "index.js",
+  "main": "app.component.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node_modules/.bin/webpack --config webpack.config.js --mode=production",

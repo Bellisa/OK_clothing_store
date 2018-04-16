@@ -1,1 +1,1 @@
-# OK_clothing_store
+# OK_store

@@ -7,9 +7,23 @@ Clone repository
 `git clone https://github.com/Bellisa/OK_store.git`
 Go to project folder and make 
 `npm i`
-`Run npm start` 
-Server is available on http://localhost:3000/
-Check route http://localhost:3000
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the production mode.<br>
+
+### `npm run hmr`
+Runs the app <br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+
+### `npm run dev`
+
+Runs the app in the development mode.<br>
 
 ## Update sources
 Some packages usages might change so you should run npm prune & npm install often. A common way to update is by doing

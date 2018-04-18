@@ -1,4 +1,4 @@
-# OK_store
+# OK STORE
   ## About
 This Github repository - single page aplication to overview and administration goods and categories.
 

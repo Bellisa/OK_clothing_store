@@ -1,0 +1,36 @@
+.bgImg  {
+  background-image: url('~/images/home-banner1.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+};
+.intro .intro-text {
+    width: 45%;
+}
+.width-home {
+  width: 35%;
+}
+.intro .intro-text {
+    left: 0;
+    width: 60%;
+    margin-top: 3rem;
+    position: absolute;
+}
+.bg-faded {
+    background-color: rgba(255,255,255,.85);
+}
+.text-center {
+    text-align: center!important;
+}
+.p-5 {
+    padding: 4rem!important;
+}
+.rounded {
+    border-radius: .25rem!important;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}

@@ -1,0 +1,61 @@
+.kotha-sidebar .widget {
+  background-color: #fff;
+  padding: 35px 30px;
+  margin-bottom: 40px;
+  -webkit-box-shadow: 0 0 2px 0 rgba(51, 51, 51, 0.08), 0 0 2px 0 rgba(51, 51, 51, 0.08);
+  box-shadow: 0 0 2px 0 rgba(51, 51, 51, 0.08), 0 0 2px 0 rgba(51, 51, 51, 0.08);
+}
+.kotha-sidebar .widget .widget-title {
+  color: #444;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin-bottom: 28px;
+}
+.kotha-sidebar .widget.widget-popular-post ul {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+.kotha-sidebar .widget.widget-popular-post ul li {
+  padding-left: 0;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e2e2e2;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+user agent stylesheet
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+.kotha-sidebar .widget.widget-popular-post ul li > a {
+  position: relative;
+  display: block;
+  margin-bottom: 14px;
+}
+.kotha-sidebar .widget.widget-popular-post ul li > a img {
+  width: 100%;
+}
+.kotha-sidebar .widget.widget-popular-post ul li .p-content h4 {
+  color: #444;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  margin-top: 0;
+}
+.kotha-sidebar .widget.widget-popular-post ul li .p-content .p-date {
+  color: #777;
+  font-style: italic;
+  font-size: 14px;
+  margin-left: 0;
+  color: #777;
+}

@@ -1,0 +1,112 @@
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+}
+.h-md-250 {
+  height: 280px;
+}
+.mb-4, .my-4 {
+  margin-bottom: 1.5rem!important;
+}
+.flex-md-row {
+  -ms-flex-direction: row!important;
+  flex-direction: row!important;
+}
+.cardProduct {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  // border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+.align-items-start {
+  -ms-flex-align: start!important;
+  align-items: flex-start!important;
+}
+.flex-column {
+  -ms-flex-direction: column!important;
+  flex-direction: column!important;
+}
+.d-flex {
+  display: -ms-flexbox!important;
+  display: flex!important;
+}
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+.cardProduct img{
+  width: 400px;
+  height: 250px;
+}
+
+/*                       */
+.post-thumb img {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+.single-blog {
+  background: #fff;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 0 0 2px 0 rgba(51, 51, 51, 0.08), 0 0 2px 0 rgba(51, 51, 51, 0.08);
+  box-shadow: 0 0 2px 0 rgba(51, 51, 51, 0.08), 0 0 2px 0 rgba(51, 51, 51, 0.08);
+}
+.single-blog .post-content {
+  overflow: hidden;
+  padding: 40px;
+}
+.single-blog .post-content .entry-header {
+  margin: 0 auto 22px;
+}
+.single-blog .post-content .entry-header .post-cat, .single-blog .post-content .entry-header .features-content .marketing-promo-box .promo-tag, .features-content .marketing-promo-box .single-blog .post-content .entry-header .promo-tag, .single-blog .magazine-blog .boxed .magazine-content .feature-post .post-content .entry-header .entry-meta .tag, .magazine-blog .boxed .magazine-content .feature-post .single-blog .post-content .entry-header .entry-meta .tag, .single-blog .magazine-blog .boxed .magazine-content .feature-post .post-content .entry-meta .entry-header .tag, .magazine-blog .boxed .magazine-content .feature-post .single-blog .post-content .entry-meta .entry-header .tag {
+  color: #da521e;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.post-cat, .features-content .marketing-promo-box .promo-tag, .magazine-blog .boxed .magazine-content .feature-post .post-content .entry-meta .tag {
+  color: #da521e;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+a {
+  color: #444;
+  text-decoration: none;
+  -webkit-transition: all 0.33s;
+  -moz-transition: all 0.33s;
+  -ms-transition: all 0.33s;
+  -o-transition: all 0.33s;
+  transition: all 0.33s;
+  line-height: 1.4;
+}
+.single-blog .post-content .entry-header h2 {
+  color: #444;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  margin-top: 0;
+}

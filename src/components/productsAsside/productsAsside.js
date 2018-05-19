@@ -1,4 +1,6 @@
+import { NavLink } from 'react-router-dom';
 import './productsAsside.scss';
+
 
 export const ProductsAsside = ({ products, categoryId } = []) => {
   if (products.length > 0) {
@@ -10,17 +12,23 @@ export const ProductsAsside = ({ products, categoryId } = []) => {
             {
               products.map(product => (
                 <li key={`asside${product.id}`}>
-                  <a href={`/Products/${product.id}&${categoryId}`} className="popular-img">
+                  <NavLink
+                    to={`/Products/${product.id}&${categoryId}`}
+                    className="popular-img"
+                  >
                     {
                       (product.id % 2 > 0) ? <img src="/images/1.jpg" alt="" /> :
-                      <img src="/images/2.jpg" alt="" />
+                        <img src="/images/2.jpg" alt="" />
                     }
-                  </a>
+                  </NavLink>
                   <div className="p-content">
                     <h4>{product.title}</h4>
-                    <a href={`/Products/${product.id}&${categoryId}`} className="btn btn-primary">
-                    View details >>
-                    </a>
+                    <NavLink
+                      to={`/Products/${product.id}&${categoryId}`}
+                      className="btn btn-primary btn-xl"
+                    >
+                      View details >>
+                    </NavLink>
                   </div>
                 </li>
               ))

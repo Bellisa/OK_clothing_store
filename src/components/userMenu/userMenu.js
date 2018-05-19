@@ -1,4 +1,5 @@
 import { NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 export const UserMenu = ({
   user, setLoginState
@@ -7,7 +8,9 @@ export const UserMenu = ({
     return (
       <React.Fragment >
         <NavDropdown title={`${user.firstName} ${user.lastName}`} id="basic-nav-dropdown">
-          <MenuItem href="/profile" >Profile</MenuItem>
+          <LinkContainer to="/profile" activeClassName="active" >
+            <MenuItem >Profile</MenuItem>
+          </LinkContainer>
           <MenuItem onClick={setLoginState} >Log out</MenuItem>
         </NavDropdown>
       </React.Fragment >
@@ -15,12 +18,16 @@ export const UserMenu = ({
   }
   return (
     <React.Fragment >
-      <NavItem href="/registration">
-        Registration
-      </NavItem>
-      <NavItem href="/login">
-        Login
-      </NavItem>
+      <LinkContainer to="/registration" activeClassName="active" >
+        <NavItem >
+          Registration
+        </NavItem>
+      </LinkContainer>
+      <LinkContainer to="/login" activeClassName="active" >
+        <NavItem >
+          Login
+        </NavItem>
+      </LinkContainer>
     </React.Fragment >
   );
 };

@@ -8,6 +8,7 @@ import { Category } from './Admin/Category';
 
 export const ProtectedPages = () => (
   <Switch>
+    <Redirect from="/login" to="/" />
 
     <Route path="/" exact component={Home} />
 

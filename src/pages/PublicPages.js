@@ -10,25 +10,25 @@ import { Register } from './Register';
 import { Success } from './Success';
 
 export const PublicPages = () => (
+
   <Switch>
+    <Route exact path="/" component={Home} />
 
-    <Route path="/" exact component={Home} />
+    <Route exact path="/Home" component={Home} />
 
-    <Route path="/Shop" exact component={Categories} />
+    <Route exact path="/Shop" component={Categories} />
 
-    <Route path="/Shop/:category" component={Category} />
+    <Route exact path="/Shop/:category" component={Category} />
 
-    <Route path="/Products" exact component={Products} />
+    <Route exact path="/Products" component={Products} />
 
-    <Route path="/Products/:product&:category" component={Product} />
+    <Route exact path="/Products/:product&:category" component={Product} />
 
-    <Route path="/login" component={Login} />
+    <Route exact path="/login" component={Login} />
 
-    <Route path="/registration" component={Register} />
+    <Route exact path="/registration" component={Register} />
 
-    <Route path="/Success" exact component={Success} />
-
-    <Redirect to="login" />
+    <Route exact path="/Success" component={Success} />
 
     <Route component={NoFound} />
   </Switch>

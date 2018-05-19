@@ -9,10 +9,25 @@ export class Category extends Component {
   constructor(props) {
     super(props);
     this.state = { category: {} };
+    this.iter = 0;
+  }
+
+  componentWillReceiveProps(nextProps, prevState) {
+    const nextId = nextProps.match.params.category || 0;
+    const currId = this.props.match.params.category || 0;
+    const currStateId = prevState.category ? prevState.category.id : 0;
+    if (nextId !== currId && nextId !== currStateId) {
+      console.log(`componentWillReceiveProps_call${this.iter++}`);
+      getCategoryById(nextId)
+        .then((data) => {
+          this.setState({ category: data });
+        })
+        .catch();
+    }
   }
   componentDidMount() {
+    console.log(`componentDidMount_call${this.iter++}`);
     const id = this.props.match.params.category || 0;
-
     getCategoryById(id)
       .then((data) => {
         this.setState({ category: data });
@@ -55,13 +70,11 @@ export class Category extends Component {
                         <p>Marijn Haverbeke</p>
                         <div>
                           <div className="btn-group">
-                            <Button
-                              bsStyle="primary"
-                              href={`/Products/${product.id}&${listCategory.id}`}
-                              title={product.title}
-                            >
+                            <NavLink
+                              to={`/Products/${product.id}&${listCategory.id}`}
+                              className="btn btn-primary btn-xl">
                               View details >>
-                            </Button>
+                              </NavLink>
                           </div>
 
                         </div>
@@ -78,7 +91,7 @@ export class Category extends Component {
   }
 }
 
-{/* <Col className="category-pb" md={4} key={`product${product.id}`}>
+{ /* <Col className="category-pb" md={4} key={`product${product.id}`}>
   <Col className="category box-shadow">
     <a href={`/Products/${product.id}`} >
       <img
@@ -103,5 +116,5 @@ export class Category extends Component {
       </div>
     </Col>
   </Col>
-</Col> */}
+</Col> */ }
 

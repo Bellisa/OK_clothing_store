@@ -13,7 +13,7 @@ export const Home = () => (
         </h2>
         <h3 className="mb-3">Into <b>ONLINE STORE</b> you can find only the best products</h3>
         <div className="intro-button mx-auto">
-          <a className="btn btn-primary btn-xl" href="/Shop">Go to Shop</a>
+          <NavLink to="/Shop" className="btn btn-primary btn-xl" >Go to Shop</NavLink>
         </div>
       </div>
       {/* <img className="img-fluid d-block mx-auto" src="http://placehold.it/200x200&amp;text=Logo" alt="" /> */}

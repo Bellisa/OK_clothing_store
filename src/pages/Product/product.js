@@ -9,6 +9,34 @@ export class Product extends Component {
     super(props);
     this.state = { product: {}, category: {} };
   }
+
+  componentWillReceiveProps(nextProps, prevState) {
+    const nextId = nextProps.match.params.category || 0;
+    const currId = this.props.match.params.category || 0;
+    const currStateId = prevState.category ? prevState.category.id : 0;
+
+
+    if (nextId !== 0 && nextId !== currId && nextId !== currStateId) {
+      getCategoryById(nextId)
+        .then((data) => {
+          this.setState({ category: data });
+        })
+        .catch();
+      return;
+    }
+    const nextProdId = nextProps.match.params.product || 0;
+    const currProdId = this.props.match.params.product || 0;
+    const currProdStateId = prevState.product ? prevState.product.id : 0;
+
+    if (nextProdId !== 0 && nextProdId !== currProdId && nextProdId !== currProdStateId) {
+      getProductById(nextProdId)
+        .then((data) => {
+          this.setState({ product: data });
+        })
+        .catch();
+    }
+  }
+
   componentDidMount() {
     const id = this.props.match.params.product || 0;
     const idCat = this.props.match.params.category || 0;
@@ -27,7 +55,7 @@ export class Product extends Component {
   }
   render() {
     const { product, category } = this.state || {};
-    const productList = (category.products)?category.products.filter(a => a.id !== product.id):[];
+    const productList = (category.products) ? category.products.filter(a => a.id !== product.id) : [];
     return (
       <React.Fragment >
         <div className="album py-5 bg-light">
@@ -60,7 +88,7 @@ export class Product extends Component {
                         className="btn-block"
                       >
                         Buy
-                    </Button>
+                      </Button>
                     </div>
                     {/* <div className="post-meta">
                       <ul className="pull-left list-inline author-meta">
@@ -84,7 +112,7 @@ export class Product extends Component {
 }
 
 
-{/* <Col md={2} />
+{ /* <Col md={2} />
 <Col className="cardProduct flex-md-row mb-8 box-shadow h-md-450" md={8}>
   <Col className="card-body d-flex flex-column align-items-start">
     <strong className="d-inline-block mb-2 text-primary" />
@@ -116,4 +144,4 @@ export class Product extends Component {
     data-holder-rendered="true"
   />
 </Col>
-<Col md={2} /> */}
+<Col md={2} /> */ }

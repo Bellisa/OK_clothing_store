@@ -1,4 +1,6 @@
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 import { connect } from 'react-redux';
 import { GetAllCategoriesAsync, logOutUserAsync } from '../../store';
 import { pages } from './const';
@@ -23,7 +25,7 @@ export class NavigationComponent extends Component {
       <Navbar collapseOnSelect fixedTop >
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="/Home">Online Shop</a>
+            <NavLink to="/Home">Online Shop</NavLink>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
@@ -33,19 +35,29 @@ export class NavigationComponent extends Component {
               Object.getOwnPropertyNames(pageMenu).map((page) => {
                 if (page !== 'Shop') {
                   return (
-                    <NavItem href={pageMenu[page]} key={`1${page}`}>
-                      {page}
-                    </NavItem>
+                    <LinkContainer exact to={pageMenu[page]} key={`${page}`}>
+                      <NavItem key={`NavItem${page}`}>
+                        {page}
+                      </NavItem>
+                    </LinkContainer>
                   );
                 }
 
                 return (
-                  <NavDropdown title="Shop" id="basic-nav-dropdown" key={page}>
-                    <MenuItem key="AllCategories" href="/Shop">All Categories</MenuItem>
-                    <MenuItem divider />
+                  <NavDropdown title="Shop" id="basic-nav-dropdown" key="NavDropdownCategories">
+                    <LinkContainer exact to="/Shop" key="AllCategories">
+                      <MenuItem key="AllCategoriesMenu">All Categories</MenuItem>
+                    </LinkContainer>
+                    <MenuItem divider key="dividerCategories" />
                     {
                       categoriesPublished.map(category =>
-                        <MenuItem key={category.id} href={`/Shop/${category.id}`}>{category.title}</MenuItem>)
+                        (
+                          <LinkContainer exact to={`/Shop/${category.id}`} key={`LinkContainer${category.id}`}>
+                            <MenuItem key={`MenuItem${category.id}`}>
+                              {category.title}
+                            </MenuItem>
+                          </LinkContainer>
+                        ))
                     }
                   </NavDropdown>
                 );

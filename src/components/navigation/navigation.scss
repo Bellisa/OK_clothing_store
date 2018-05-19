@@ -1,19 +1,22 @@
 .navbar-default {
-  background-color: rgb(140,189,46);
+  background-color: rgb(140,189,46)!important;
   border-color: rgb(99,135,33);
   color: #fff;
 }
 .navbar-default .navbar-nav > li > a {
   color: #fff;
+  background-color: rgb(140,189,46)!important;
 }
 .navbar-default .navbar-brand {
   color: #fff;
+  background-color: rgb(140,189,46)!important;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   color: #555;
-  background-color: rgb(140,189,46);
+  background-color: rgb(140,189,46)!important;
 }
 .navbar-default .navbar-nav > li > a :active {
   color: #777;
+  background-color: rgb(140,189,46)!important;
 }

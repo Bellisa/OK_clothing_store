@@ -1,4 +1,5 @@
-import { Row, Col, Grid, Button } from 'react-bootstrap';
+import { Row, Col, Grid } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { GetAllCategoriesAsync } from '../../store';
 import { PageInfo } from '../../components/pageInfo';
@@ -47,13 +48,8 @@ export class CategoriesComponent extends Component {
                         <p>Marijn Haverbeke</p>
                         <div>
                           <div className="btn-group">
-                            <Button
-                              bsStyle="primary"
-                              href={`/Shop/${category.id}`}
-                              title={category.title}
-                            >
-                              Goods >>
-                            </Button>
+                            <NavLink to={`/Shop/${category.id}`} className="btn btn-primary btn-xl" >Goods >></NavLink>
+
                           </div>
 
                         </div>

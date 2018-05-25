@@ -10,10 +10,6 @@ import { getUserAsync } from './store';
 
 export class AppComponent extends Component {
   componentDidUpdate() {
-    // if (this.props.error) {
-    //   this.container.error(<strong>{this.props.error}</strong>, <em>Error</em>);
-    //   this.props.dispatch(setError(''));
-    // }
   }
 
   componentDidMount() {

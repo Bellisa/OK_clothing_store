@@ -12,9 +12,9 @@ export const ProtectedPages = () => (
 
     <Route path="/" exact component={Home} />
 
-    <Route path="/profile" component={Profile} />
+    <Route path="/profile" exact component={Profile} />
 
-    <Route path="/Categories" component={Categories} />
+    <Route path="/Categories" exact component={Categories} />
 
     <Route path="/Categories/:category" component={Category} />
 

@@ -12,13 +12,11 @@ export const request = (url, method = 'GET', body, options) => {
   };
 
   Object.assign(fetchOpts, options);
-  console.log(fetchOpts);
   const promise = axios.request(fetchOpts)
     .then(({ data }) => {
       if (data.error) {
         return Promise.reject(data.error);
       }
-      console.log(data, ' shetch data');
       return Promise.resolve(data);
     });
 

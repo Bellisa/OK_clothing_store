@@ -1,5 +1,5 @@
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 import { connect } from 'react-redux';
 import { GetAllCategoriesAsync, logOutUserAsync } from '../../store';
@@ -86,4 +86,4 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-export const Navigation = connect(mapStateToProps, mapDispatchToProps)(NavigationComponent);
+export const Navigation = withRouter(connect(mapStateToProps, mapDispatchToProps)(NavigationComponent));

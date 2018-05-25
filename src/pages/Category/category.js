@@ -26,7 +26,6 @@ export class Category extends Component {
     }
   }
   componentDidMount() {
-    console.log(`componentDidMount_call${this.iter++}`);
     const id = this.props.match.params.category || 0;
     getCategoryById(id)
       .then((data) => {
